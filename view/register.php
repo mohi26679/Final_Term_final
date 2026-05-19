@@ -1,37 +1,48 @@
-!DOCTYPE html>
+<?php
+include '../control/Registration_process.php';
+?>
+
+<!DOCTYPE html> 
 <html>
-<head>
-    <title>Register</title>
-</head>
+
 <body>
+<head>
+    <link rel="stylesheet" type="text/css" href="../cs/style.css">
+</head>
+<div class="register-container">
+    <h1>Registration Form</h1>
+    <p>Register here</p>
 
-<h2>Registration</h2>
-<form action="../Control/AuthController.php" method="POST" onsubmit="return validateRegister()">
-<label for="name">Name:</label><br>
-    <input type="text" name="name" ><br><br>
-<label for="email">Email:</label><br>
-    <input type="email" name="email" ><br><br>
-<label for="password">Password:</label><br>
-    <input type="password" name="password" id="password" ><br><br>
-<label for="address">Address:</label><br>
-    <textarea name="address" ></textarea><br><br>
-<label for="phone">Phone:</label><br>
-    <input type="text" name="phone" ><br><br>
 
-    <select name="role">
-        <option value="member">Member</option>
-        <option value="admin">Admin</option>
-    </select><br><br>
 
-    <input type="submit" name="register" value="Register">
+    <form action="" method="post" enctype="multipart/form-data">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="uname"><br><br>
+        
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="myemail"><br><br>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="pass"><br><br>
+        <label for="file">Upload profile Picture:</label>
+        <input type="file" id="file" name="myfile"><br><br>
+        <label>Select Role:</label>
 
+<select name="role">
+    <option value="employee">Employee</option>
+    <option value="admin">Admin</option>
+</select>
+
+        
+        <input type="submit" name="register" value="Register">
+        
+
+
+<br><br>
+<p>If you already have an account? 
+<a href="login.php">Sign In</a>
+</p>
 </form>
-
-<br>
-
-<a href="login.php">Already Have Account? Login</a>
-
-<script src="../js/validation.js"></script>
-
+</div>
 </body>
 </html>

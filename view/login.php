@@ -1,27 +1,29 @@
-<!DOCTYPE html>
+<?php
+include '../Control/login_process.php';
+?>
+
 <html>
-<head>
-    <title>Login</title>
-</head>
-<body>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../cs/style.css">
+        <title>Login</title
+    </head>
+    <body>
+        <div class="login-container">
+        <h2>Login</h2>
+        <form action="" method="post">
+           
+            <label for="uname">Username:</label>
+            <input type="text" id="uname" name="uname" ><br><br>
 
-<h2>Login</h2>
+            <label for="pass">Password:</label>
+            <input type="password" id="pass" name="pass" ><br><br>
 
-<form action="../Control/AuthController.php" method="POST">
-
-    <input type="email" name="email" ><br><br>
-
-    <input type="password" name="password" ><br><br>
-
-    <input type="checkbox" name="remember"> Remember Me<br><br>
-
-    <input type="submit" name="login" value="Login">
-
-</form>
-
-<br>
-
-<a href="register.php">Create New Account</a>
-
-</body>
+            <input type="submit" name="login" value="Login">
+        </form>
+        <p>If you don't have an account? 
+<a href="Registration.php">Sign Up</a>
+</p>
+         <?php echo $errorMsg; ?>
+    </body>
+    </div>
 </html>

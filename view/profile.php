@@ -1,64 +1,38 @@
-<?php
-
-session_start();
-
-include '../Model/UserModel.php';
-
-$user = new UserModel();
-
-$data = $user->getUserById($_SESSION['user_id']);
+<?php 
+include '../control/profile_process.php';
 
 ?>
-
-<!DOCTYPE html>
 <html>
-<head>
-    <title>Profile</title>
-</head>
-<body>
+    <head>
+        <title>Profile</title>
+    </head>
+    <body>
+        <h2>Profile</h2>
+        <p>Welcome to your profile!</p>
+        <p>Hello, <?php echo $_SESSION["username"]; ?>!</p>
+Email: <?php echo isset($email) ? $email : ''; ?>
+<br>
 
-<?php include '../navbar.php'; ?>
 
-<?php
-if(isset($_SESSION['success'])){
-    echo $_SESSION['success'];
-    unset($_SESSION['success']);
-}
-?>
 
-<h2>Profile</h2>
+<img src="../uploads/<?php echo isset($file) ? $file : 'default.jpg'; ?>" alt="Profile Image" width="200" height="200">
+<a href="../view/editprofile.php">Edit Profile</a>
 
-<img src="../uploads/<?php echo $data['profile_pic']; ?>" width="100"><br><br>
+<hr/>
 
-<form action="../Control/ProfileController.php" method="POST" enctype="multipart/form-data">
+<input type="text" name="username" id="username" onkeyup="getUserData()" >
 
-    <input type="text" name="name" value="<?php echo $data['name']; ?>"><br><br>
+<p id="result"> </p>
 
-    <input type="email" name="email" value="<?php echo $data['email']; ?>"><br><br>
 
-    <textarea name="address"><?php echo $data['address']; ?></textarea><br><br>
 
-    <input type="text" name="phone" value="<?php echo $data['phone']; ?>"><br><br>
 
-    <input type="file" name="image"><br><br>
+<hr/>
 
-    <input type="submit" name="update" value="Update Profile">
 
-</form>
 
-<hr>
+        <a href="../control/logout_process.php">Logout</a>
 
-<h2>Change Password</h2>
-
-<form action="../Control/ProfileController.php" method="POST">
-
-    <input type="password" name="current_password" ><br><br>
-
-    <input type="password" name="new_password" ><br><br>
-
-    <input type="submit" name="change_password" value="Change Password">
-
-</form>
-
-</body>
+<script src="../js/validation.js"></script>
+    </body>
 </html>
