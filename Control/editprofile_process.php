@@ -1,6 +1,11 @@
 <?php
 include '../model/UserModel.php';
 session_start();
+if(!isset($_SESSION["user"])){
+
+    header("Location: login.php");
+    exit();
+}
 
 $mydb = new UserModel();
 $conn = $mydb->createConn();

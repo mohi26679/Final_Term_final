@@ -1,5 +1,5 @@
 <?php
-include '../control/Registration_process.php';
+include '../Control/Registration_process.php';
 ?>
 
 <!DOCTYPE html> 
@@ -7,7 +7,7 @@ include '../control/Registration_process.php';
 
 <body>
 <head>
-    <link rel="stylesheet" type="text/css" href="../cs/style.css">
+    <link rel="stylesheet" type="text/cs" href="../cs/style.css">
 </head>
 <div class="register-container">
     <h1>Registration Form</h1>

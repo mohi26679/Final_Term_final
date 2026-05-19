@@ -1,12 +1,13 @@
 <?php
-include '../control/admin_dashboard.php';
+include '../Control/admin_dashboard.php';
 ?>
+
 
 <!DOCTYPE html> 
 <html>
 
 <head>
-    <link rel="stylesheet" href="../cs/admin.css">
+    <link rel="stylesheet" href="../cs/view.css">
 </head>
 
 <body>
@@ -25,9 +26,9 @@ include '../control/admin_dashboard.php';
 
         <a href="#">Dashboard</a>
         <a href="Addcars_info.php">Add Product</a>
-        <a href="#">View Products</a>
+        <a href="product_display.php">View Products</a>
         <a href="#">Users</a>
-        <a href="../control/logout_process.php">Logout</a>
+        <a href="../Control/logout_process.php">Logout</a>
 
     </div>
 

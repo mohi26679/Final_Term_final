@@ -1,11 +1,12 @@
 <?php
 include '../Control/login_process.php';
+
 ?>
 
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="../cs/style.css">
-        <title>Login</title
+        <title>Login</title>
     </head>
     <body>
         <div class="login-container">
@@ -21,7 +22,7 @@ include '../Control/login_process.php';
             <input type="submit" name="login" value="Login">
         </form>
         <p>If you don't have an account? 
-<a href="Registration.php">Sign Up</a>
+<a href="register.php">Sign Up</a>
 </p>
          <?php echo $errorMsg; ?>
     </body>

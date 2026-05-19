@@ -1,5 +1,5 @@
 <?php 
-include '../control/profile_process.php';
+include '../Control/profile_process.php';
 
 ?>
 <html>
@@ -31,7 +31,7 @@ Email: <?php echo isset($email) ? $email : ''; ?>
 
 
 
-        <a href="../control/logout_process.php">Logout</a>
+        <a href="../Control/logout_process.php">Logout</a>
 
 <script src="../js/validation.js"></script>
     </body>

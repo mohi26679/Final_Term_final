@@ -6,7 +6,7 @@ include '../control/Carsinfo_process.php';
 <html>
 
 <head>
-    <link rel="stylesheet" href="../cs/admin.css">
+    <link rel="stylesheet" href="../cs/view.css">
 </head>
 
 <body>
@@ -25,7 +25,7 @@ include '../control/Carsinfo_process.php';
 
         <a href="#">Dashboard</a>
         <a href="Addcars_info.php">Add Product</a>
-        <a href="#">View Products</a>
+        <a href="product_display.php">View Products</a>
         <a href="#">Users</a>
         <a href="../control/logout_process.php">Logout</a>
 
