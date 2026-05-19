@@ -1,37 +1,35 @@
 <?php
-include '../Model/database.php';
+class MyDB2 {
 
-class CarModel {
+    function createConn(){
+$DBHOST = "localhost";
+$DBUSER = "root";
+$DBPASS = "";
+$DBNAME = "online_car_rent";
+$conn = new mysqli($DBHOST, $DBUSER, $DBPASS, $DBNAME);
+return $conn;
+    } 
+    
+    function createProduct($name, $model, $type, $price_per_day, $image_path, $description, $conn){
+$sql="INSERT INTO cars (name, model, type , price_per_day,image_path,description) VALUES ('$name', '$model', '$type', '$price_per_day', '$image_path', '$description')";
+return $conn->query($sql);
+}
+function getProduct($name, $conn){
+$sql="SELECT * FROM cars WHERE name='$name' ";
+return $conn->query($sql);
+}
 
-    public function featuredCars(){
-        global $conn;
+function updateProduct($name, $price_per_day, $model, $type, $image_path, $description, $conn){
+$sql="UPDATE cars SET price_per_day='$price_per_day', model='$model', type='$type', image_path='$image_path', description='$description' WHERE name='$name'";
+return $conn->query($sql);
+}
 
-        $sql = "SELECT * FROM cars WHERE featured=1 LIMIT 6";
 
-        $result = $conn->query($sql);
+function closeConn($conn){
+$conn->close();
+}
 
-        return $result;
-    }
 
-    public function getCategories(){
-        global $conn;
-
-        $sql = "SELECT DISTINCT type FROM cars";
-
-        return $conn->query($sql);
-    }
-
-    public function carsByCategory($type){
-        global $conn;
-
-        $stmt = $conn->prepare("SELECT * FROM cars WHERE type=?");
-
-        $stmt->bind_param("s",$type);
-
-        $stmt->execute();
-
-        return $stmt->get_result();
-    }
 }
 
 ?>

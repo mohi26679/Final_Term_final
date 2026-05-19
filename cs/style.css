@@ -1,0 +1,163 @@
+body {
+    font-family: Arial;
+    background: linear-gradient(120deg, #dfe9f3, #ffffff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* MAIN CARD */
+.register-container {
+    background: white;
+    padding: 30px;
+    width: 380px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* heading */
+.register-container h1 {
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* inputs */
+.register-container input[type="text"],
+.register-container input[type="password"],
+.register-container input[type="file"],
+.register-container select {
+    width: 100%;
+    padding: 10px;
+    margin: 6px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* button */
+.register-container input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.register-container input[type="submit"]:hover {
+    background: #45a049;
+}
+
+/* link */
+.register-container a {
+    color: blue;
+    text-decoration: none;
+}
+/* CARD BOX */
+.login-container {
+    background: white;
+    padding: 30px;
+    width: 350px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+/* heading */
+.login-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* inputs */
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* button */
+.login-container input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.login-container input[type="submit"]:hover {
+    background: #0056b3;
+}
+
+/* link */
+.login-container a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.login-container a:hover {
+    text-decoration: underline;
+}
+
+/* error message */
+.login-container p {
+    margin-top: 10px;
+}
+
+
+
+
+/* MAIN LAYOUT */
+.admin-container {
+    display: flex;
+    height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 220px;
+    background: #2c3e50;
+    color: white;
+    padding: 20px;
+}
+
+/* SIDEBAR TITLE */
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* SIDEBAR LINKS */
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 12px;
+    margin: 5px 0;
+    background: #34495e;
+    border-radius: 5px;
+}
+
+.sidebar a:hover {
+    background: #1abc9c;
+}
+
+/* MAIN CONTENT */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    background: #f4f6f8;
+}
+
+.body {
+    margin: 0;
+    font-family: Arial;
+}

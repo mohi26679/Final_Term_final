@@ -1,0 +1,125 @@
+/* BODY */
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    overflow: hidden; 
+    height: 100vh;
+    /* --------------------------------------------------------- */
+    /* Header, Container ebong Footer vertical align korar jonno flex content hobe */
+    /* --------------------------------------------------------- */
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER (COMMON) */
+.admin-header,
+.display-header{
+    background: linear-gradient(to right, #0f172a, #1e293b);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.admin-header h2,
+.display-header h2{
+    margin: 0;
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+/* CONTAINER (COMMON) */
+.admin-container,
+.display-container{
+    display: flex;
+    /* --------------------------------------------------------- */
+    /* flex: 1; dewar fole eta header ar footer er majhkhaner baki sob */
+    /* jayga automatic nibe, manual height lagbe na */
+    /* --------------------------------------------------------- */
+    flex: 1;
+    overflow: hidden;
+}
+
+/* SIDEBAR (COMMON) */
+.sidebar{
+    width: 240px;
+    background-color: #0f172a;
+    padding-top: 25px;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+}
+
+.sidebar h2{
+    color: white;
+    text-align: center;
+    margin-bottom: 35px;
+    font-size: 24px;
+}
+
+/* LINKS */
+.sidebar a{
+    display: block;
+    color: #e2e8f0;
+    text-decoration: none;
+    padding: 15px 25px;
+    margin: 5px 10px;
+    border-radius: 8px;
+    transition: 0.3s;
+    font-size: 16px;
+}
+
+.sidebar a:hover{
+    background-color: #2563eb;
+    color: white;
+    transform: translateX(5px);
+}
+
+/* MAIN CONTENT */
+.main-content{
+    flex: 1;
+    padding: 40px;
+    overflow-y: auto; 
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.main-content h1{
+    color: #0f172a;
+    margin-bottom: 25px;
+    font-size: 32px;
+}
+
+
+
+/* FORM (ADMIN PAGE) */
+.main-content form{
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+}
+
+.main-content input,
+.main-content textarea{
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+/* FOOTER */
+.admin-footer,
+.display-footer{
+    background-color: #0f172a;
+    color: white;
+    text-align: center;
+  
+    padding: 2px 0;
+    font-size: 15px;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+}
